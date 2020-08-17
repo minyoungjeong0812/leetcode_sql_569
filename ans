@@ -1,0 +1,11 @@
+**MY answer**
+
+select temp.Id, temp.Company, temp.Salary
+from(
+Select *,dense_rank() OVER (Partition by Company Order by Salary ASC) as rank
+from Employee
+order by Salary ASC
+) temp
+group by temp.Company
+having rank = (select count(Id)/2 from Employee group by Company)
+
