@@ -1,3 +1,4 @@
+https://www.db-fiddle.com/f/gfS6u8XeLgPoXjRt3PD5tT/0
 **MY answer**
 
 select temp.Id, temp.Company, temp.Salary
